@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+    
+    @ObservedObject(initialValue: TaskListViewModel()) var viewModel
+
+    init () {
+        viewModel.createDummyData(count: 5)
     }
+    
+    var body: some View {
+        VStack {
+            Text("Hello, world!")
+                .padding()
+            List {
+                ForEach(viewModel.taskList) { task in
+                    Text(task.name)
+                }
+            }
+        }
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
+
     static var previews: some View {
         ContentView()
     }
+
 }

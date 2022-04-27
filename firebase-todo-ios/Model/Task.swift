@@ -11,10 +11,23 @@ struct Task: Identifiable, Hashable, Codable {
 
     // MARK: - Properties
 
-    var id: String
+    var id = UUID().uuidString
     var name: String
-    var description: String
-    var done: Bool
-    var date: String
+    var description: String?
+    var done = false
+    var date = Date()
 
+}
+
+extension Task {
+    
+    static var dummyTask = [
+        "ダミー1",
+        "ダミー2",
+        "ダミー3"
+    ]
+    
+    static func dummyData() -> Task {
+        .init(name: dummyTask.randomElement()!)
+    }
 }
