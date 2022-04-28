@@ -16,14 +16,18 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .padding()
-            List {
-                ForEach(viewModel.taskList) { task in
-                    Text(task.name)
+        NavigationView {
+            VStack {
+                Text("Hello, world!")
+                    .padding()
+                List {
+                    ForEach(viewModel.taskList) { task in
+                        Text(task.name)
+                    }
                 }
             }
+            .navigationTitle("タスク一覧")
+            .navigationBarItems(trailing: EditButton()) // 編集ボタン
         }
     }
 
