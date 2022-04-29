@@ -11,6 +11,22 @@ import Combine
 final class TaskListViewModel: ObservableObject {
 
     @Published var taskList = [Task]()
+    @Published var taskName = ""
+    
+    /// 入力情報をクリア
+    func clear() {
+        self.taskName = ""
+    }
+
+    /// タスクを作成
+    func createNewTask() {
+        if (self.taskName.isEmpty) {
+            return
+        }
+        let newTask = Task(name: self.taskName)
+        taskList.insert(newTask, at: 0)
+        self.clear()
+    }
 
 }
 

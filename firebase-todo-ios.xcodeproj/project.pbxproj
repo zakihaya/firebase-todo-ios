@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3465784C281BCAD5009A1636 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465784B281BCAD5009A1636 /* CreateTaskView.swift */; };
 		34C8627A2817BE6D00BF21D2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C862792817BE6D00BF21D2 /* Task.swift */; };
 		34C921EB281A1CEE002603A7 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C921EA281A1CEE002603A7 /* TaskListViewModel.swift */; };
 		34D6565528165F49007650C3 /* firebase_todo_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6565428165F49007650C3 /* firebase_todo_iosApp.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3465784B281BCAD5009A1636 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
 		34C862792817BE6D00BF21D2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		34C921EA281A1CEE002603A7 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		34D6565128165F49007650C3 /* firebase-todo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "firebase-todo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3465784A281BCAB7009A1636 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34D6565628165F49007650C3 /* ContentView.swift */,
+				3465784B281BCAD5009A1636 /* CreateTaskView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		34C862782817BE5100BF21D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +125,10 @@
 		34D6565328165F49007650C3 /* firebase-todo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3465784A281BCAB7009A1636 /* View */,
 				34C921E9281A1C7D002603A7 /* ViewModel */,
 				34C862782817BE5100BF21D2 /* Model */,
 				34D6565428165F49007650C3 /* firebase_todo_iosApp.swift */,
-				34D6565628165F49007650C3 /* ContentView.swift */,
 				34D6565828165F4B007650C3 /* Assets.xcassets */,
 				34D6565A28165F4B007650C3 /* Preview Content */,
 			);
@@ -280,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D6565728165F49007650C3 /* ContentView.swift in Sources */,
+				3465784C281BCAD5009A1636 /* CreateTaskView.swift in Sources */,
 				34C921EB281A1CEE002603A7 /* TaskListViewModel.swift in Sources */,
 				34C8627A2817BE6D00BF21D2 /* Task.swift in Sources */,
 				34D6565528165F49007650C3 /* firebase_todo_iosApp.swift in Sources */,

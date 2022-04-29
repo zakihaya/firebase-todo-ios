@@ -18,8 +18,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Hello, world!")
+                CreateTaskView(viewModel: self.viewModel)
                     .padding()
+
                 List {
                     ForEach(viewModel.taskList) { task in
                         Text(task.name)
