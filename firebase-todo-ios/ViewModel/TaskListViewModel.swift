@@ -24,8 +24,12 @@ final class TaskListViewModel: ObservableObject {
             return
         }
         let newTask = Task(name: self.taskName)
-        taskList.insert(newTask, at: 0)
+        self.taskList.insert(newTask, at: 0)
         self.clear()
+    }
+    
+    func delete(at offsets: IndexSet) {
+        self.taskList.remove(atOffsets: offsets)
     }
 
 }

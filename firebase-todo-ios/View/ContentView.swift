@@ -25,6 +25,7 @@ struct ContentView: View {
                     ForEach(viewModel.taskList) { task in
                         Text(task.name)
                     }
+                    .onDelete(perform: viewModel.delete(at:))
                 }
             }
             .navigationTitle("タスク一覧")
